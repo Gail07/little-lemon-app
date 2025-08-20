@@ -193,6 +193,7 @@ input, label{
   height: 420px;
   background: #a9c8be;
   border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .menu-items p{
   margin-left: 15px;
@@ -232,7 +233,6 @@ footer section{
   justify-content: space-between;
   align-items: start;
 }
-
 
 
 .company-info img{
@@ -310,6 +310,8 @@ footer ul li{
     width: 100%;
   }
 
+  
+
   footer section{
     padding: 10px 8%;
     flex-direction: column;
@@ -321,4 +323,60 @@ footer ul li{
 
 .hidden{
   display: none;
+}
+
+/* testimonials section */
+.testimonials-container {
+  padding: 10px 13%;
+  margin: 110px auto;
+}
+
+.testimonials-items{
+  width: 250px;
+  height: 250px;
+  background: #c8bea9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.testimonials-container h2 {
+  color: #000;
+}
+
+.testimonials-info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.testimonials-items p {
+  margin-left: 15px;
+}
+
+.testimonials-items img {
+  width: 50%;
+  height: 150px;
+  clip-path: circle(40%);
+  float :left;
+}
+
+.testimonials-items h5{
+  margin-left: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.testimonials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.testimonials-cards{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem 1rem;
 }
