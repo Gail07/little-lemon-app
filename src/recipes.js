@@ -3,7 +3,7 @@ const recipes = [
     id: 1,
     title: "Greek salad",
     price: 12.99,
-    image: "greek-salad.jpg",
+    image: "Greek-Salad.jpg",
     description:
       "A fresh and healthy salad with tomatoes, cucumbers, olives, and feta.",
   },
