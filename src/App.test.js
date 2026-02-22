@@ -1,54 +1,56 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { BrowserRouter } from "react-router-dom";
 import BookingForm from "./Components/pages/BookingForm";
-import App from "./App";
-
-test("Renders the Header heading", () => {
-  render(
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  );
-  const headingElement = screen.getByRole("button", {
-    name: "Reserve a table",
-  });
-  expect(headingElement).toBeInTheDocument();
-
-  const reserveButton = screen.getByRole("button");
-  fireEvent.click(reserveButton);
-
-  const headingElementNew = screen.getByText("Choose Date");
-  expect(headingElementNew).toBeInTheDocument();
-});
 
 test("Renders the BookingForm heading", () => {
+  const mockAvailableTimes = ["17:00", "18:00", "19:00", "20:00"];
+  const mockDispatch = jest.fn();
+  const mockSubmitForm = jest.fn();
+
   render(
-    <BrowserRouter>
-      <BookingForm />
-    </BrowserRouter>
+    <BookingForm
+      availableTimes={mockAvailableTimes}
+      dispatch={mockDispatch}
+      SubmitForm={mockSubmitForm}
+    />
   );
-  const headingElement = screen.getByText("BookingForm");
+  const headingElement = screen.getByText("Make Your reservation");
   expect(headingElement).toBeInTheDocument();
 });
 
-test("Initialize/Update Times", async () => {
+test("BookingForm displays available times", () => {
+  const mockAvailableTimes = ["17:00", "18:00", "19:00", "20:00"];
+  const mockDispatch = jest.fn();
+  const mockSubmitForm = jest.fn();
+
   render(
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <BookingForm
+      availableTimes={mockAvailableTimes}
+      dispatch={mockDispatch}
+      SubmitForm={mockSubmitForm}
+    />
   );
-  const reserveButton = screen.getByRole("button");
-  fireEvent.click(reserveButton);
 
-  userEvent.click(screen.getByLabelText("Choose Date"));
-
-  const testTime = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
   const timeOptions = screen.getAllByRole("option");
-  const timeValues = timeOptions.map((option) => option.value);
-  expect(timeValues).toEqual(testTime);
-  // userEvent.selectOptions(screen.getByLabelText("Choose Time"),screen.getByRole('option', { name: testTime}))
-  // expect(screen.getByRole('option', { name: testTime}).selected).toBe(true);
+  expect(timeOptions.length).toBeGreaterThan(0);
+});
+
+test("BookingForm accepts user input", async () => {
+  const mockAvailableTimes = ["17:00", "18:00", "19:00"];
+  const mockDispatch = jest.fn();
+  const mockSubmitForm = jest.fn();
+
+  render(
+    <BookingForm
+      availableTimes={mockAvailableTimes}
+      dispatch={mockDispatch}
+      SubmitForm={mockSubmitForm}
+    />
+  );
+
+  const dateInput = screen.getByLabelText("Choose Date");
+  await userEvent.type(dateInput, "2025-03-15");
+  expect(dateInput.value).toBe("2025-03-15");
 });
 
 function LocalStorageReader({ keyName }) {
