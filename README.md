@@ -1,53 +1,198 @@
-# Getting Started with Create React App
+# 🍋 Little Lemon App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Une application web moderne pour le restaurant Little Lemon, développée avec React. Cette application offre une expérience utilisateur fluide avec navigation, menu interactif, réservations en ligne, avis clients et bien plus encore.
 
-## Available Scripts
+## 📋 Table des matières
 
-In the project directory, you can run:
+- [Description](#description)
+- [Prérequis](#prérequis)
+- [Installation](#installation)
+- [Démarrage](#démarrage)
+- [Scripts disponibles](#scripts-disponibles)
+- [Structure du projet](#structure-du-projet)
+- [Technologies utilisées](#technologies-utilisées)
+- [Dépannage](#dépannage)
 
-### `npm start`
+## 📝 Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Little Lemon App est une plateforme Web pour un restaurant proposant :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Accueil** : Page d'accueil avec présentation du restaurant
+- **Menu** : Consultation du menu des plats disponibles
+- **Réservation** : Système de réservation en ligne pour les clients
+- **Avis** : Section témoignages et avis clients
+- **Authentification** : Connexion pour les utilisateurs
+- **Navigation** : Interface utilisateur intuitive avec barre de navigation et pied de page
 
-### `npm test`
+## 🛠️ Prérequis
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Avant de commencer, assurez-vous d'avoir installé :
 
-### `npm run build`
+- **Node.js** (version 14.0.0 ou supérieure) : [Télécharger Node.js](https://nodejs.org/)
+- **npm** (version 6.0.0 ou supérieure) : généralement inclus avec Node.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Pour vérifier vos versions :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+node --version
+npm --version
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 💻 Installation
 
-### `npm run eject`
+### 1. Cloner ou télécharger le projet
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+# Si vous avez git installé
+git clone <URL_DU_DEPOT>
+cd little-lemon-app
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Installer les dépendances
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Dans le répertoire du projet, exécutez :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install
+```
 
-## Learn More
+Cette commande télécharge et installe toutes les dépendances listées dans `package.json`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 3. Configuration (optionnel)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Vérifiez que le fichier `.env` est bien configuré si nécessaire. Par défaut, l'application s'exécutera sur `http://localhost:3000`.
 
-### Code Splitting
+## 🚀 Démarrage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Mode développement
+
+Pour lancer l'application en mode développement :
+
+```bash
+npm start
+```
+
+L'application s'ouvrira automatiquement dans votre navigateur par défaut à l'adresse [http://localhost:3000](http://localhost:3000).
+
+**Caractéristiques du mode développement :**
+- Rechargement en direct : les modifications apportées au code sont automatiquement visibles
+- Console d'erreurs : les erreurs de compilation et d'ESLint s'affichent dans la console
+- DevTools React : inspection des composants React simplifiée
+
+### Mode production
+
+Pour générer une version optimisée pour la production :
+
+```bash
+npm run build
+```
+
+Cela crée un dossier `build` avec les fichiers optimisés prêts pour le déploiement.
+
+## 📦 Scripts disponibles
+
+| Commande | Description |
+|----------|-------------|
+| `npm start` | Lance l'application en mode développement sur le port 3000 |
+| `npm run build` | Crée une version de production optimisée dans le dossier `build` |
+| `npm test` | Lance les tests unitaires en mode interactif |
+| `npm run eject` | Éjecte la configuration (irreversible - déconseillé) |
+
+## 📁 Structure du projet
+
+```
+little-lemon-app/
+├── public/                    # Fichiers publics statiques
+│   ├── index.html            # Page HTML principale
+│   ├── manifest.json         # Configuration PWA
+│   └── robots.txt            # Instructions pour les moteurs de recherche
+│
+├── src/                       # Code source principal
+│   ├── App.js                # Composant principal de l'application
+│   ├── App.css               # Styles globaux
+│   ├── index.js              # Point d'entrée React
+│   ├── index.css             # Styles du point d'entrée
+│   │
+│   ├── Components/           # Composants React
+│   │   ├── Navbar.js         # Barre de navigation
+│   │   ├── Footer.js         # Pied de page
+│   │   ├── Main.js           # Composant principal
+│   │   ├── Testimonials.js   # Section avis clients
+│   │   ├── orderOnline.js    # Commande en ligne
+│   │   │
+│   │   └── pages/            # Pages de l'application
+│   │       ├── Home.js       # Page d'accueil
+│   │       ├── Menu.js       # Page du menu
+│   │       ├── BookingPage.js # Page de réservation
+│   │       ├── BookingForm.js # Formulaire de réservation
+│   │       ├── ConfirmBooking.js # Confirmation de réservation
+│   │       ├── Login.js      # Page de connexion
+│   │       ├── About.js      # Page À propos
+│   │       ├── Header.js     # En-tête
+│   │       └── reservation.js # Logique de réservation
+│   │
+│   ├── images/               # Images du projet
+│   │   └── food1.avif        # Images alimentaires
+│   │
+│   ├── recipes.js            # Données de recettes
+│   ├── testimony.js          # Données de témoignages
+│   └── __mocks__/            # Mocks pour les tests
+│       └── react-router-dom.js # Mock de React Router
+│
+├── package.json              # Dépendances du projet
+├── README.md                 # Ce fichier
+└── .gitignore               # Fichiers à ignorer dans Git
+```
+
+## 🔧 Technologies utilisées
+
+| Technologie | Version | Description |
+|-------------|---------|-------------|
+| **React** | 19.1.0 | Bibliothèque JavaScript pour les interfaces utilisateur |
+| **React DOM** | 19.1.0 | Rendu React dans le navigateur |
+| **React Router** | 7.13.0 | Navigation multi-pages |
+| **React Icons** | 5.5.0 | Bibliothèque d'icônes |
+| **SweetAlert2** | 11.22.3 | Modales et alertes stylisées |
+| **Testing Library** | Dernière version | Tests unitaires pour React |
+| **Babel** | 7.x | Compilateur JavaScript |
+
+## 🐛 Dépannage
+
+### Problème : "npm: commande non trouvée"
+
+**Solution :** Installez Node.js depuis [nodejs.org](https://nodejs.org/). npm est inclus avec Node.js.
+
+### Problème : "Port 3000 déjà utilisé"
+
+**Solution :** Le port 3000 est occupé par une autre application. Vous pouvez :
+- Terminer le processus utilisant le port 3000
+- Ou lancer l'application sur un port différent :
+
+```bash
+PORT=3001 npm start
+```
+
+### Problème : "Module not found" après `npm install`
+
+**Solution :** Supprimez le dossier `node_modules` et `package-lock.json`, puis réinstallez :
+
+```bash
+rm -r node_modules package-lock.json
+npm install
+```
+
+### Problème : Les changements ne se mettent pas à jour en temps réel
+
+**Solution :** Vérifiez que vous êtes bien en mode développement (`npm start`). Si cela persiste, redémarrez le serveur :
+- Arrêtez le serveur avec `Ctrl+C`
+- Relancez avec `npm start`
+
+## 📧 Support
+
+Pour toute question ou problème, veuillez consulter la documentation officielle :
+- [Documentation React](https://react.dev/)
+- [Documentation Create React App](https://create-react-app.dev/)
+- [Documentation React Router](https://reactrouter.com/)
 
 ### Analyzing the Bundle Size
 
