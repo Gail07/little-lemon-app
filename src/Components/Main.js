@@ -3,6 +3,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import Header from "./pages/Header";
 import ConfirmBooking from "./pages/ConfirmBooking";
 import BookingPage from "./pages/BookingForm";
+import UserInformation from "./pages/UserInformation";
 
 const Main = () => {
   const seedRandom = function (seed) {
@@ -68,6 +69,15 @@ const Main = () => {
               availableTimes={state.availableTimes}
               dispatch={dispatch}
               SubmitForm={SubmitForm}
+            />
+          }
+        />
+        <Route
+          path="/userInformation"
+          element={
+            <UserInformation
+              SubmitForm={SubmitForm}
+              dispatch={dispatch}
             />
           }
         />

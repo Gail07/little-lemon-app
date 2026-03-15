@@ -160,6 +160,27 @@ input, label{
   color: blue;
 }
 
+.back-btn input{
+  padding: 12px 16px;
+  margin-top: 20px;
+  background: #495e57;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+}
+
+.back-btn input:hover, .submit-btn input:hover{
+  background: #333333;
+  cursor: pointer;
+}
+
+.back-btn{
+  display: inline-block;
+  margin-left: 20px;
+}
 
 /* menu items */
 
