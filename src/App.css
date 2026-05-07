@@ -401,3 +401,12 @@ footer ul li{
   flex-wrap: wrap;
   gap: 2rem 1rem;
 }
+
+.active-btn {
+  opacity: 1;
+  cursor: pointer;
+}
+.disabled-btn {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

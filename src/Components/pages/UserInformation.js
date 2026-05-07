@@ -139,11 +139,10 @@ const UserInformation = (props) => {
 
             <div className="submit-btn2">
               <input
-                aria-label="On Click"
                 type="submit"
                 value="Confirm reservation"
                 disabled={!isFormValid()}
-                style={{opacity: isFormValid() ? 1 : 0.5, cursor: isFormValid() ? 'pointer' : 'not-allowed'}}
+                className={isFormValid() ? "active-btn" : "disabled-btn"}
               />
             </div>
 
