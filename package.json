@@ -1,7 +1,7 @@
 {
   "name": "little-lemon-app",
   "version": "0.1.0",
-  "homepage": "https://Gail07.github.io/little-lemon-app",
+  "homepage": "https://Gail07.github.io/little-lemon-app/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",

@@ -1,6 +1,6 @@
 import logo from "../images/Logo .svg";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -23,9 +23,9 @@ const Navbar = () => {
             </div>
 
             <ul className={`nav-links ${menuOpen ? 'visible' : ''}`}>
-                <li><a href="/#">Home</a></li>
+                <li><Link to="/">Home</Link></li>
                 <li><a href="/#">About</a></li>
-                <li><a href="/#">Reservation</a></li>
+                <li><Link to="/bookingPage">Reservation</Link></li>
                 <li><a href="/#">Order online</a></li>
                 <li><a href="/#">Login</a></li>
             </ul>

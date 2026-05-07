@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/little-lemon-app/static/css/main.af50ea0e.css",
+    "main.js": "/little-lemon-app/static/js/main.c00e880a.js",
+    "static/js/453.a1c555ca.chunk.js": "/little-lemon-app/static/js/453.a1c555ca.chunk.js",
+    "static/media/Greek-Salad.jpg": "/little-lemon-app/static/media/Greek-Salad.bed423a1fab5b210e347.jpg",
+    "static/media/restauranfood.jpg": "/little-lemon-app/static/media/restauranfood.e8abf5b772b6817189aa.jpg",
+    "static/media/Clark-Emet.jpg": "/little-lemon-app/static/media/Clark-Emet.0a7bbb168fb532518922.jpg",
+    "static/media/Bruschetta.jpg": "/little-lemon-app/static/media/Bruschetta.b93568178df29c68d3a4.jpg",
+    "static/media/Janet-Okwo.jpg": "/little-lemon-app/static/media/Janet-Okwo.a7593936b37336193813.jpg",
+    "static/media/Frank-Molet.jpg": "/little-lemon-app/static/media/Frank-Molet.98ceacd56f9cfd138fdb.jpg",
+    "static/media/github-cover.png": "/little-lemon-app/static/media/github-cover.d264ef0323d317fd1719.png",
+    "static/media/small_logo.png": "/little-lemon-app/static/media/small_logo.2c859235d6c57bb54176.png",
+    "static/media/Logo .svg": "/little-lemon-app/static/media/Logo .fd87fc34e15316b670ea115ce700cd15.svg",
+    "static/media/food1.avif": "/little-lemon-app/static/media/food1.d0c2d4f42c8986624d3e.avif",
+    "static/media/littlelemon_logo.png": "/little-lemon-app/static/media/littlelemon_logo.d4cae6fac8384c2dae04.png",
+    "index.html": "/little-lemon-app/index.html",
+    "static/media/menu-icon.svg": "/little-lemon-app/static/media/menu-icon.c1017fc571b9d0b37f7a.svg",
+    "main.af50ea0e.css.map": "/little-lemon-app/static/css/main.af50ea0e.css.map",
+    "main.c00e880a.js.map": "/little-lemon-app/static/js/main.c00e880a.js.map",
+    "453.a1c555ca.chunk.js.map": "/little-lemon-app/static/js/453.a1c555ca.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af50ea0e.css",
+    "static/js/main.c00e880a.js"
+  ]
+}
