@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./UserInformation.css";
 
 const UserInformation = (props) => {
   const [firstName, setFirstName] = useState("");
@@ -49,12 +50,30 @@ const UserInformation = (props) => {
     setErrors(newErrors);
     
     if (Object.keys(newErrors).length === 0) {
-      props.SubmitForm({
+      const userInfo = {
         firstName,
         lastName,
         email,
         comments,
-      });
+      };
+      
+      props.SubmitForm(userInfo);
+      
+      // Get reservation details from state or dispatch
+      const reservationData = {
+        date: localStorage.getItem("reservationDate") || "",
+        time: localStorage.getItem("reservationTime") || "",
+        guests: localStorage.getItem("reservationGuests") || "",
+        occasion: localStorage.getItem("reservationOccasion") || "",
+        firstName,
+        lastName,
+        email,
+        comments,
+      };
+      
+      // Navigate to confirmation page with all data
+      navigate("/confirmed", { state: reservationData });
+      
       setFirstName("");
       setLastName("");
       setEmail("");
@@ -82,83 +101,96 @@ const UserInformation = (props) => {
     }
     props.dispatch({ type: "UPDATE_USER_INFORMATION", payload: { [name]: value } });
   };
+  
   return (
-    <header>
-      <section>
-        <form onSubmit={handleSubmit}>
-          <fieldset>
-            <div>
-              <label htmlFor="firstName">First Name</label>
+    <div className="user-information-container">
+      <div className="form-card">
+        <div className="form-header">
+          <h1>Informations Personnelles</h1>
+          <p className="form-subtitle">Complétez vos informations pour finaliser votre réservation</p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="user-form">
+          <fieldset className="form-fieldset">
+            <legend className="form-legend">Vos Informations</legend>
+            
+            <div className="form-group">
+              <label htmlFor="firstName" className="form-label">Prénom <span className="required">*</span></label>
               <input
                 type="text"
                 id="firstName"
                 name="firstName"
                 value={firstName}
                 onChange={handleChange}
+                className={`form-input ${errors.firstName ? 'input-error' : ''}`}
+                placeholder="Entrez votre prénom"
               />
-              {errors.firstName && <span style={{color: 'red'}}>{errors.firstName}</span>}
+              {errors.firstName && <span className="error-message">{errors.firstName}</span>}
             </div>
 
-            <div>
-              <label htmlFor="lastName">Last Name</label>
+            <div className="form-group">
+              <label htmlFor="lastName" className="form-label">Nom de Famille <span className="required">*</span></label>
               <input
                 type="text"
                 id="lastName"
                 name="lastName"
                 value={lastName}
                 onChange={handleChange}
+                className={`form-input ${errors.lastName ? 'input-error' : ''}`}
+                placeholder="Entrez votre nom"
               />
-              {errors.lastName && <span style={{color: 'red'}}>{errors.lastName}</span>}
+              {errors.lastName && <span className="error-message">{errors.lastName}</span>}
             </div>
 
-            <div>
-              <label htmlFor="email">Email</label>
+            <div className="form-group">
+              <label htmlFor="email" className="form-label">Email <span className="required">*</span></label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 value={email}
                 onChange={handleChange}
+                className={`form-input ${errors.email ? 'input-error' : ''}`}
+                placeholder="votre.email@exemple.com"
                 required
               />
-              {errors.email && <span style={{color: 'red'}}>{errors.email}</span>}
+              {errors.email && <span className="error-message">{errors.email}</span>}
             </div>
 
-            <div>
-              <label htmlFor="comments">Comments</label>
+            <div className="form-group">
+              <label htmlFor="comments" className="form-label">Remarques (optionnel)</label>
               <textarea
                 id="comments"
                 name="comments"
                 value={comments}
                 onChange={handleChange}
+                className="form-textarea"
                 rows="4"
-                cols="40"
-                placeholder="Enter any additional comments"
+                placeholder="Entrez vos remarques spéciales ou demandes particulières..."
               />
             </div>
 
-            <div className="submit-btn2">
-              <input
+            <div className="form-actions">
+              <button
                 type="submit"
-                value="Confirm reservation"
                 disabled={!isFormValid()}
-                className={isFormValid() ? "active-btn" : "disabled-btn"}
-              />
-            </div>
-
-            <div className="back-btn">
-              <input
-                aria-label="On Click"
+                className={`btn btn-confirm ${isFormValid() ? 'btn-active' : 'btn-disabled'}`}
+              >
+                Confirmer la Réservation
+              </button>
+              
+              <button
                 type="button"
-                value="Back to Home"
                 onClick={() => navigate("/")}
-              />
+                className="btn btn-back"
+              >
+                Retour à l'Accueil
+              </button>
             </div>
           </fieldset>
         </form>
-      </section>
-      
-    </header>
+      </div>
+    </div>
   );
 };
 

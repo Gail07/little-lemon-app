@@ -29,7 +29,12 @@ const BookingForm = (props) => {
     setErrors(newErrors);
     
     if (Object.keys(newErrors).length === 0) {
-      // store date/time info in parent state, then go to user info step
+      // Store reservation details in localStorage and dispatch
+      localStorage.setItem("reservationDate", date);
+      localStorage.setItem("reservationTime", time);
+      localStorage.setItem("reservationGuests", guests);
+      localStorage.setItem("reservationOccasion", occasion);
+      
       props.dispatch({ type: "SET_RESERVATION_DETAILS", payload: { date, time, guests, occasion }});
       navigate("/userInformation");
       // clear local fields

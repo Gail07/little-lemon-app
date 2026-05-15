@@ -49,11 +49,26 @@ function App() {
     }
   };
 
-  const initialState = { availableTimes: fetchAPI(new Date()) };
+  const initialState = { 
+    availableTimes: fetchAPI(new Date()),
+    reservationDetails: {},
+    userInformation: {}
+  };
   const [state, dispatch] = useReducer(updateTimes, initialState);
 
-  function updateTimes(state, date) {
-    return { availableTimes: fetchAPI(new Date()) };
+  function updateTimes(state, action) {
+    if (action.type === "SET_RESERVATION_DETAILS") {
+      return { 
+        ...state, 
+        reservationDetails: action.payload 
+      };
+    } else if (action.type === "UPDATE_USER_INFORMATION") {
+      return { 
+        ...state, 
+        userInformation: { ...state.userInformation, ...action.payload } 
+      };
+    }
+    return { availableTimes: fetchAPI(new Date()), ...state };
   }
 
   function SubmitForm(formData) {
