@@ -111,6 +111,11 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #333333;
+  color: #fff;
+}
+
 .banner-img{
   position: absolute;
   right: 13%;
@@ -215,7 +220,14 @@ input, label{
   background: #a9c8be;
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
+
+.menu-items:hover {
+  transform: scale(1.08);
+}
+
 .menu-items p{
   margin-left: 15px;
 }
@@ -358,6 +370,12 @@ footer ul li{
   background: #c8bea9;
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.testimonials-items:hover {
+  transform: scale(1.08);
 }
 
 .testimonials-container h2 {

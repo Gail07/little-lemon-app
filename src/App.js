@@ -9,7 +9,7 @@ import Header from "./Components/pages/Header";
 import BookingPage from "./Components/pages/BookingForm";
 import UserInformation from "./Components/pages/UserInformation";
 import ConfirmBooking from "./Components/pages/ConfirmBooking";
-
+import About from "./Components/pages/About";
 function App() {
   const seedRandom = function (seed) {
     var m = 2 ** 35 - 31;
@@ -111,6 +111,7 @@ function App() {
           }
         />
         <Route path="/confirmed" element={<ConfirmBooking />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </>
