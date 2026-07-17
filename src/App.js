@@ -10,6 +10,13 @@ import BookingPage from "./Components/pages/BookingForm";
 import UserInformation from "./Components/pages/UserInformation";
 import ConfirmBooking from "./Components/pages/ConfirmBooking";
 import About from "./Components/pages/About";
+import OrderOnline from "./Components/pages/OrderOnline/OrderOnline";
+import Cart from "./Components/pages/Cart/Cart";
+import PlaceOrder from "./Components/pages/PlaceOrder/PlaceOrder";
+import AppDownload from "./Components/AppDownload/AppDownload";
+
+
+
 function App() {
   const seedRandom = function (seed) {
     var m = 2 ** 35 - 31;
@@ -112,6 +119,9 @@ function App() {
         />
         <Route path="/confirmed" element={<ConfirmBooking />} />
         <Route path="/about" element={<About />} />
+        <Route path="/orderOnline" element={<OrderOnline />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/placeOrder" element={<PlaceOrder />} />
       </Routes>
       <Footer />
     </>
