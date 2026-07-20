@@ -4,6 +4,7 @@ import menuList from './menuList'
 import { MdAddCircle } from 'react-icons/md'
 import { MdRemoveCircle } from 'react-icons/md'
 import { useEffect } from 'react'
+import Swal from "sweetalert2";
 
 const OrderOnline = () => {
   const [itemCounts, setItemCounts] = React.useState({})
@@ -44,11 +45,31 @@ const OrderOnline = () => {
     removeFromCart(menuId)
   }
 
-  const cartCount = Object.values(cartItems).reduce((sum, count) => sum + count, 0)
-
   useEffect(() => {
     console.log(cartItems)
   }, [cartItems])
+
+  
+    const handleOrderClick = (menuId) => {
+      console.log(menuId, "clicked");
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#4ccea2ff",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, order it!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "Ordered!",
+            text: "Your order has been placed.",
+            icon: "success",
+          });
+        }
+      });
+    }
 
   return (
     <>
@@ -86,7 +107,7 @@ const OrderOnline = () => {
                   </div>
                 </div>
                 <p>{menu.description}</p>
-                <button className="order-button" onClick={() => handleAdd(menu.id)}>
+                <button className="order-button" onClick={() => handleOrderClick(menu.id)}>
                   Order Now
                 </button>
               </div>

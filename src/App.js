@@ -13,7 +13,6 @@ import About from "./Components/pages/About";
 import OrderOnline from "./Components/pages/OrderOnline/OrderOnline";
 import Cart from "./Components/pages/Cart/Cart";
 import PlaceOrder from "./Components/pages/PlaceOrder/PlaceOrder";
-import AppDownload from "./Components/AppDownload/AppDownload";
 
 
 
