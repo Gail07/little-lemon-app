@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/little-lemon-app/static/css/main.95e01508.css",
-    "main.js": "/little-lemon-app/static/js/main.06066baf.js",
+    "main.js": "/little-lemon-app/static/js/main.ef80ab11.js",
     "static/js/453.cf2d9cd9.chunk.js": "/little-lemon-app/static/js/453.cf2d9cd9.chunk.js",
     "static/media/Greek-Salad.jpg": "/little-lemon-app/static/media/Greek-Salad.bed423a1fab5b210e347.jpg",
     "static/media/restauranfood.jpg": "/little-lemon-app/static/media/restauranfood.e8abf5b772b6817189aa.jpg",
@@ -44,11 +44,11 @@
     "index.html": "/little-lemon-app/index.html",
     "static/media/menu-icon.svg": "/little-lemon-app/static/media/menu-icon.c1017fc571b9d0b37f7a.svg",
     "main.95e01508.css.map": "/little-lemon-app/static/css/main.95e01508.css.map",
-    "main.06066baf.js.map": "/little-lemon-app/static/js/main.06066baf.js.map",
+    "main.ef80ab11.js.map": "/little-lemon-app/static/js/main.ef80ab11.js.map",
     "453.cf2d9cd9.chunk.js.map": "/little-lemon-app/static/js/453.cf2d9cd9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95e01508.css",
-    "static/js/main.06066baf.js"
+    "static/js/main.ef80ab11.js"
   ]
 }
