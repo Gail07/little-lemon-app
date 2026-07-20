@@ -57,7 +57,6 @@ const OrderOnline = () => {
           <div className="order-online-content">
             <h2>Order Your favourite food here</h2>
             <p>Choose from our delicious menu and order delivery or pickup!</p>
-            <p className="cart-summary">Items in cart: {cartCount}</p>
           </div>
         </section>
       </header>
