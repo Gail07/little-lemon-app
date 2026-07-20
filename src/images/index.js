@@ -1,5 +1,5 @@
 import appStore from './appStore.jfif'
-import playStore from './playStore.jfif'
+import playStore from './playStore.png'
 
 export const images = {
   appStore,
