@@ -1,27 +1,37 @@
 {
   "files": {
-    "main.css": "/little-lemon-app/static/css/main.cc54e459.css",
-    "main.js": "/little-lemon-app/static/js/main.a6f273f5.js",
-    "static/js/453.a1c555ca.chunk.js": "/little-lemon-app/static/js/453.a1c555ca.chunk.js",
+    "main.css": "/little-lemon-app/static/css/main.95e01508.css",
+    "main.js": "/little-lemon-app/static/js/main.87142865.js",
+    "static/js/453.cf2d9cd9.chunk.js": "/little-lemon-app/static/js/453.cf2d9cd9.chunk.js",
     "static/media/Greek-Salad.jpg": "/little-lemon-app/static/media/Greek-Salad.bed423a1fab5b210e347.jpg",
     "static/media/restauranfood.jpg": "/little-lemon-app/static/media/restauranfood.e8abf5b772b6817189aa.jpg",
     "static/media/plat3.jpg": "/little-lemon-app/static/media/plat3.cf12fcc5f68bd7044c3c.jpg",
+    "static/media/orderbanner.jpg": "/little-lemon-app/static/media/orderbanner.3271a78723b245fe3110.jpg",
     "static/media/personnes3.jpg": "/little-lemon-app/static/media/personnes3.787162a9fb164127deec.jpg",
     "static/media/plat5.jpg": "/little-lemon-app/static/media/plat5.553092cba46ae6e465df.jpg",
     "static/media/restoMedi1.jpg": "/little-lemon-app/static/media/restoMedi1.aacaac87a9cdb224bfe2.jpg",
     "static/media/plat6.jpg": "/little-lemon-app/static/media/plat6.a5cb79baf061b6310744.jpg",
     "static/media/plat7.jpg": "/little-lemon-app/static/media/plat7.1421cc64eb5ee8a3f4c8.jpg",
     "static/media/Clark-Emet.jpg": "/little-lemon-app/static/media/Clark-Emet.0a7bbb168fb532518922.jpg",
+    "static/media/pieuvreGrillee.jpg": "/little-lemon-app/static/media/pieuvreGrillee.23ccfa04680d3e1e56aa.jpg",
     "static/media/restaurant.jpg": "/little-lemon-app/static/media/restaurant.188b0a646d9f25242534.jpg",
+    "static/media/paella.jpg": "/little-lemon-app/static/media/paella.8866dbc9e53b53d0b262.jpg",
+    "static/media/pouletBraise.jpg": "/little-lemon-app/static/media/pouletBraise.d9dbf3496055fd747576.jpg",
     "static/media/Bruschetta.jpg": "/little-lemon-app/static/media/Bruschetta.b93568178df29c68d3a4.jpg",
     "static/media/chef.jpg": "/little-lemon-app/static/media/chef.83d8b19a8e8beb300c46.jpg",
     "static/media/Janet-Okwo.jpg": "/little-lemon-app/static/media/Janet-Okwo.a7593936b37336193813.jpg",
+    "static/media/fatteh.jpg": "/little-lemon-app/static/media/fatteh.5cd066b47851a78da921.jpg",
     "static/media/chef2.jpg": "/little-lemon-app/static/media/chef2.54a67b40fcb9faee3f51.jpg",
+    "static/media/crevette.jpg": "/little-lemon-app/static/media/crevette.263c8522761e10d19ca4.jpg",
+    "static/media/trempette.jpg": "/little-lemon-app/static/media/trempette.9a4811031d458443182e.jpg",
+    "static/media/pouletAuxOlives.jpg": "/little-lemon-app/static/media/pouletAuxOlives.f5e7098605b6acc3df17.jpg",
     "static/media/Frank-Molet.jpg": "/little-lemon-app/static/media/Frank-Molet.98ceacd56f9cfd138fdb.jpg",
     "static/media/restauMedi.jpg": "/little-lemon-app/static/media/restauMedi.23e5f485e67c3fa9eab4.jpg",
     "static/media/personnes.jpg": "/little-lemon-app/static/media/personnes.f4d51ef34e8d256bfffb.jpg",
     "static/media/plat.jpg": "/little-lemon-app/static/media/plat.23337c98a407a0410c0d.jpg",
+    "static/media/feuillesDeVigne.jpg": "/little-lemon-app/static/media/feuillesDeVigne.25196557f39d6ad1112a.jpg",
     "static/media/plat4.jpg": "/little-lemon-app/static/media/plat4.bcf8e9e395a81c02ba40.jpg",
+    "static/media/poissonFrit.jpg": "/little-lemon-app/static/media/poissonFrit.bcf8e9e395a81c02ba40.jpg",
     "static/media/plat2.jpg": "/little-lemon-app/static/media/plat2.28ac879eadc300cf95b3.jpg",
     "static/media/chef3.jpg": "/little-lemon-app/static/media/chef3.7de6e20bdf2e9bfce0a6.jpg",
     "static/media/github-cover.png": "/little-lemon-app/static/media/github-cover.d264ef0323d317fd1719.png",
@@ -33,12 +43,12 @@
     "static/media/littlelemon_logo.png": "/little-lemon-app/static/media/littlelemon_logo.d4cae6fac8384c2dae04.png",
     "index.html": "/little-lemon-app/index.html",
     "static/media/menu-icon.svg": "/little-lemon-app/static/media/menu-icon.c1017fc571b9d0b37f7a.svg",
-    "main.cc54e459.css.map": "/little-lemon-app/static/css/main.cc54e459.css.map",
-    "main.a6f273f5.js.map": "/little-lemon-app/static/js/main.a6f273f5.js.map",
-    "453.a1c555ca.chunk.js.map": "/little-lemon-app/static/js/453.a1c555ca.chunk.js.map"
+    "main.95e01508.css.map": "/little-lemon-app/static/css/main.95e01508.css.map",
+    "main.87142865.js.map": "/little-lemon-app/static/js/main.87142865.js.map",
+    "453.cf2d9cd9.chunk.js.map": "/little-lemon-app/static/js/453.cf2d9cd9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc54e459.css",
-    "static/js/main.a6f273f5.js"
+    "static/css/main.95e01508.css",
+    "static/js/main.87142865.js"
   ]
 }
