@@ -55,8 +55,8 @@ const About = () => {
                 <p>Meet the talented chefs and staff who make Little Lemon a special place to dine!</p>
                 <div className="gallery1">
                     <img src={chefImg} alt="chef img" />
-                    <img src={chef2Img} alt="chef2 img" />
-                    <img src={chef3Img} alt="chef3 img" />
+                    <img src={chef2Img} alt="chef2 img"  />
+                    <img src={chef3Img} alt="chef3 img" id="chef3"/>
                 </div>
             </div>
             <div className="vacancy-container">

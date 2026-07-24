@@ -70,6 +70,8 @@
     border-radius: 8px;
 }
 
+
+
 /* Team Section */
 .team-container {
   background: #495e57;
@@ -101,9 +103,13 @@
 }
 
 .gallery1 img {
-    width: 60%;
-    height: 300px;
+    width: 250px;
+    height: 310px;
     border-radius: 8px;
+}
+
+#chef3{
+  width: 400px;
 }
 
 /* Vacancy Section */
