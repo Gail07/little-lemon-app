@@ -1,5 +1,5 @@
 import "./App.css";
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Menu from "./Components/pages/Menu";
@@ -13,6 +13,7 @@ import About from "./Components/pages/About";
 import OrderOnline from "./Components/pages/OrderOnline/OrderOnline";
 import Cart from "./Components/pages/Cart/Cart";
 import PlaceOrder from "./Components/pages/PlaceOrder/PlaceOrder";
+import Login from "./Components/Login/Login";
 
 
 
@@ -83,9 +84,14 @@ function App() {
     }
   }
 
+  const [showLogin, setShowLogin] = useState(false)
+
   return (
     <>
-      <Navbar />
+    {showLogin && (
+  <Login setShowLogin={setShowLogin} />
+)}
+      <Navbar setShowLogin={setShowLogin} />
       <Routes>
         <Route
           path="/"

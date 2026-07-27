@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -27,7 +27,7 @@ const Navbar = () => {
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/bookingPage">Reservation</Link></li>
                 <li><Link to="/orderOnline">Order online</Link></li>
-                <li><Link to="/login">Login</Link></li>
+                <li onClick={()=>setShowLogin(true)}><Link to="/">Login</Link></li>
             </ul>
         </nav>
     );
