@@ -106,16 +106,16 @@ const UserInformation = (props) => {
     <div className="user-information-container">
       <div className="form-card">
         <div className="form-header">
-          <h1>Informations Personnelles</h1>
-          <p className="form-subtitle">Complétez vos informations pour finaliser votre réservation</p>
+          <h1>Personal Information</h1>
+          <p className="form-subtitle">Complete your information to finalize your booking</p>
         </div>
 
         <form onSubmit={handleSubmit} className="user-form">
           <fieldset className="form-fieldset">
-            <legend className="form-legend">Vos Informations</legend>
+            <legend className="form-legend">Your Information</legend>
             
             <div className="form-group">
-              <label htmlFor="firstName" className="form-label">Prénom <span className="required">*</span></label>
+              <label htmlFor="firstName" className="form-label">Firstname <span className="required">*</span></label>
               <input
                 type="text"
                 id="firstName"
@@ -129,7 +129,7 @@ const UserInformation = (props) => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="lastName" className="form-label">Nom de Famille <span className="required">*</span></label>
+              <label htmlFor="lastName" className="form-label">Surname<span className="required">*</span></label>
               <input
                 type="text"
                 id="lastName"
@@ -158,7 +158,7 @@ const UserInformation = (props) => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="comments" className="form-label">Remarques (optionnel)</label>
+              <label htmlFor="comments" className="form-label">Remarks (optional)</label>
               <textarea
                 id="comments"
                 name="comments"
@@ -176,7 +176,7 @@ const UserInformation = (props) => {
                 disabled={!isFormValid()}
                 className={`btn btn-confirm ${isFormValid() ? 'btn-active' : 'btn-disabled'}`}
               >
-                Confirmer la Réservation
+                Confirm the Reservation
               </button>
               
               <button
@@ -184,7 +184,7 @@ const UserInformation = (props) => {
                 onClick={() => navigate("/")}
                 className="btn btn-back"
               >
-                Retour à l'Accueil
+                Return to Homepage
               </button>
             </div>
           </fieldset>
