@@ -16,8 +16,8 @@ const ConfirmBooking = () => {
       <div className="confirmation-card">
         <div className="confirmation-header">
           <div className="success-icon">✓</div>
-          <h1>Réservation Confirmée</h1>
-          <p className="subtitle">Merci d'avoir réservé chez Little Lemon</p>
+          <h1>Reservation Confirmed</h1>
+          <p className="subtitle">Thank you for booking with Little Lemon</p>
         </div>
 
         {data && Object.keys(data).length > 0 ? (
@@ -25,16 +25,16 @@ const ConfirmBooking = () => {
             {/* Greeting */}
             <div className="greeting-section">
               <p className="greeting-text">
-                Bienvenue {data.firstName} {data.lastName},
+                Welcome{data.firstName} {data.lastName},
               </p>
               <p className="message-text">
-                Votre réservation a été confirmée avec succès. Vous recevrez un email de confirmation à l'adresse {data.email}.
+                Your reservation has been successfully confirmed. You will receive a confirmation email at the address {data.email}.
               </p>
             </div>
 
             {/* Reservation Details */}
             <div className="details-section">
-              <h2>Détails de votre Réservation</h2>
+              <h2>Your Reservation Details</h2>
               <div className="details-grid">
                 {data.date && (
                   <div className="detail-item">
@@ -44,13 +44,13 @@ const ConfirmBooking = () => {
                 )}
                 {data.time && (
                   <div className="detail-item">
-                    <span className="detail-label">⏰ Heure</span>
+                    <span className="detail-label">⏰ Hour</span>
                     <span className="detail-value">{data.time}</span>
                   </div>
                 )}
                 {data.guests && (
                   <div className="detail-item">
-                    <span className="detail-label">👥 Nombre de Convives</span>
+                    <span className="detail-label">👥 Number of Guests</span>
                     <span className="detail-value">{data.guests} {data.guests > 1 ? "personnes" : "personne"}</span>
                   </div>
                 )}
@@ -65,10 +65,10 @@ const ConfirmBooking = () => {
 
             {/* Customer Information */}
             <div className="customer-section">
-              <h2>Informations du Client</h2>
+              <h2>Customer Information</h2>
               <div className="info-box">
                 <div className="info-row">
-                  <span className="info-label">Nom Complet:</span>
+                  <span className="info-label">Full Name:</span>
                   <span className="info-value">{data.firstName} {data.lastName}</span>
                 </div>
                 <div className="info-row">
@@ -77,7 +77,7 @@ const ConfirmBooking = () => {
                 </div>
                 {data.comments && (
                   <div className="info-row">
-                    <span className="info-label">Remarques:</span>
+                    <span className="info-label">Remarks:</span>
                     <span className="info-value comment-text">{data.comments}</span>
                   </div>
                 )}
@@ -87,14 +87,14 @@ const ConfirmBooking = () => {
             {/* Important Notice */}
             <div className="notice-section">
               <p className="notice-text">
-                💡 <strong>À retenir:</strong> Veuillez arriver 10 minutes avant votre réservation. 
-                Si vous avez besoin d'annuler ou de modifier votre réservation, contactez-nous au moins 24 heures à l'avance.
+                💡 <strong>Key points to remember:</strong> Please arrive 10 minutes before your reservation. 
+                If you need to cancel or change your reservation, please contact us at least 24 hours in advance.
               </p>
             </div>
           </div>
         ) : (
           <div className="no-data-section">
-            <p>Aucun détail de réservation disponible.</p>
+            <p>No booking details available.</p>
           </div>
         )}
 
@@ -104,13 +104,13 @@ const ConfirmBooking = () => {
             className="btn btn-primary" 
             onClick={() => navigate("/")}
           >
-            Retour à l'accueil
+           Return to homepage
           </button>
           <button 
             className="btn btn-secondary" 
             onClick={() => window.print()}
           >
-            Imprimer la confirmation
+            Print confirmation
           </button>
         </div>
       </div>
