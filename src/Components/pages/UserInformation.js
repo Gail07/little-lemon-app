@@ -166,7 +166,7 @@ const UserInformation = (props) => {
                 onChange={handleChange}
                 className="form-textarea"
                 rows="4"
-                placeholder="Entrez vos remarques spéciales ou demandes particulières..."
+                placeholder="Enter your special remarks or specific requests..."
               />
             </div>
 
