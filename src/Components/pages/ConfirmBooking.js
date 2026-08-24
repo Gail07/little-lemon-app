@@ -8,7 +8,7 @@ const ConfirmBooking = () => {
 
   const formatDate = (dateString) => {
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString('fr-FR', options);
+    return new Date(dateString).toLocaleDateString('en-EN', options);
   };
 
   return (
@@ -51,7 +51,7 @@ const ConfirmBooking = () => {
                 {data.guests && (
                   <div className="detail-item">
                     <span className="detail-label">👥 Number of Guests</span>
-                    <span className="detail-value">{data.guests} {data.guests > 1 ? "personnes" : "personne"}</span>
+                    <span className="detail-value">{data.guests} {data.guests > 1 ? "persons" : "person"}</span>
                   </div>
                 )}
                 {data.occasion && (
